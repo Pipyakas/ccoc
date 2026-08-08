@@ -1,0 +1,39 @@
+{
+  "name": "ccoc",
+  "version": "0.0.1",
+  "description": "Run Claude Code through models and credentials configured in OpenCode.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pipyakas/ccoc.git"
+  },
+  "type": "module",
+  "bin": {
+    "ccoc": "./bin/ccoc.cjs"
+  },
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "test": "tsx --test tests/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "update:opencode": "tsx scripts/update-opencode.ts"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.5.2",
+    "@opencode-ai/llm": "file:vendor/opencode-llm",
+    "@opencode-ai/schema": "file:vendor/opencode-schema",
+    "@smithy/eventstream-codec": "4.2.14",
+    "@smithy/util-utf8": "4.2.2",
+    "aws4fetch": "1.0.20",
+    "cross-spawn": "^7.0.6",
+    "effect": "4.0.0-beta.83",
+    "tsx": "4.19.4"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6",
+    "@types/node": "24.12.2",
+    "typescript": "5.8.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
